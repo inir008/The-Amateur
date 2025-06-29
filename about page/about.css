@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gloock&family=Noto+Sans+Mono:wght@100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto Mono", monospace;
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(45deg, black, #222222b2), url('../img/the-amateur-picture.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.about {
+    text-align: center;
+    padding: 20px;
+}
+
+.about h1 {
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-family: 'Gloock', serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+hr {
+    border: 1px solid #444;
+    margin: 20px 0;
+}
+
+.cast {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cast h1 {
+    width: 100%;
+    text-align: center;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.cast .box {
+    width: 200px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.cast .box:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.cast .box img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.cast .box p {
+    margin-top: 10px;
+    font-family: 'Gloock', serif;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.cast .box p:hover {
+    color: #ffcc00;
+    transition: color 0.3s ease;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ffd9008f;
+}
+
+.icon {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+}

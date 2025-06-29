@@ -10,7 +10,6 @@
 body {
     font-family: "Roboto Mono", monospace;
     height: 100vh;
-    /* background: linear-gradient(45deg, black, #222); */
     color: #fff;
 }
 
@@ -23,33 +22,49 @@ body {
     background-repeat: no-repeat;
 }
 
-.header .logo {
-    position: absolute;
-    top: 10px;
-    left: 10px;
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.header h1 {
     text-transform: uppercase;
-    font-family: "Gloock", serif;
+    font-family: "Black Han Sans", sans-serif;
     font-weight: 400;
-    font-style: normal;
     font-size: 3rem;
 }
 
-.logo span {
+.header h1 span {
     font-weight: 700;
     color: #ffd9008f;
 }
 
 .header ul {
-    position: absolute;
-    top: 10px;
-    right: 10px;
     display: flex;
     justify-content: center;
-    align-items: center;
     list-style: none;
-    gap: 30px;
+    gap: 40px;
     font-size: 2rem;
     text-transform: uppercase;
+}
+
+.hamburger {
+    cursor: pointer;
+    height: 60px;
+    width: 60px;
+    font-size: 3rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+}
+
+.hamburger:hover {
+    color: #ffd9008f;
 }
 
 .container {
@@ -58,8 +73,8 @@ body {
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
-    padding-left: 40px;
-    height: 100vh;
+    margin: 0 40px;
+    height: calc(100vh - 100px);
 }
 
 .container h2 {
@@ -79,8 +94,52 @@ body {
 a {
     color: #fff;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 a:hover {
     color: #ffd9008f;
+}
+
+@media screen and (max-width: 768px) {
+    .header h1 {
+        font-size: 2.5rem;
+    }
+
+    .header ul {
+        font-size: 1.5rem;
+        gap: 20px;
+    }
+
+    .container h2 {
+        font-size: 3rem;
+    }
+
+    .container p {
+        font-size: 1.2rem;
+        max-width: 100%;
+    }
+    
+    .hamburger {
+        display: flex;
+        z-index: 1001;
+    }
+
+    .header ul.active {
+        right: 0;
+    }
+
+    .header ul {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.95);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        gap: 3rem;
+    }
 }
